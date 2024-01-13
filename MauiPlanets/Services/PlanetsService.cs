@@ -186,17 +186,129 @@ namespace MauiPlanets.Services
                     "https://solarsystem.nasa.gov/system/feature_items/images/84_neptune_carousel_2.jpg"
                 }
             },
+
+            new()
+            {
+                Name = "Pluto",
+                Subtitle = "The god of the underworld",
+                HeroImage = "pluto.png",
+                Description = "Pluto, discovered in 1930 by Clyde Tombaugh,"+
+                "is a dwarf planet in the outer solar system."+
+                "Originally considered the ninth planet, it was reclassified in 2006."+
+                "With a diameter of about 1,473 miles,"+
+                "Pluto has a thin atmosphere and a complex system of moons, including Charon."+
+                "NASA's New Horizons mission in 2015 provided detailed images,"+
+                "revealing diverse and geologically active features like icy mountains and plains."+
+                "The exploration of Pluto offers insights into the outer solar system.",
+                AccentColorStart = Color.FromArgb("#0c293d"),
+                AccentColorEnd = Color.FromArgb("#26abe0"),
+                Images = new()
+                {
+                    "https://photojournal.jpl.nasa.gov/jpegMod/PIA21863_modest.jpg",
+                    "https://photojournal.jpl.nasa.gov/jpegMod/PIA11709_modest.jpg",
+                    "https://photojournal.jpl.nasa.gov/jpegMod/PIA21026_modest.jpg"
+                }
+            },
+
+            new()
+            {
+                Name = "Ceres",
+                Subtitle = "The goddess of agriculture, fertility, and motherly relationships",
+                HeroImage = "ceres.png",
+                Description = "Ceres is the largest object in the asteroid belt between"+
+                "Mars and Jupiter and is classified as a dwarf planet."+
+                "Discovered by Italian astronomer Giuseppe Piazzi in 1801,"+
+                "Ceres has a diameter of about 590 miles (940 kilometers)."+
+                "It was the first dwarf planet to be visited by a spacecraft"+
+                "when NASA's Dawn mission orbited and studied it from 2015 to 2018."+
+                "Ceres is unique for hosting a large, bright area known as Occator Crater,"+
+                "which contains bright deposits believed to be composed of sodium carbonate,"+
+                "possibly originating from subsurface water."+
+                "The dwarf planet is of particular interest to scientists as it provides"+
+                "insights into the early solar system and the potential presence of water ice on its surface.",
+                AccentColorStart = Color.FromArgb("#0c293d"),
+                AccentColorEnd = Color.FromArgb("#26abe0"),
+                Images = new()
+                {
+                    "https://photojournal.jpl.nasa.gov/jpegMod/PIA23017_modest.jpg",
+                    "https://photojournal.jpl.nasa.gov/jpegMod/PIA21918_modest.jpg",
+                    "https://photojournal.jpl.nasa.gov/jpegMod/PIA21906_modest.jpg"
+                }
+            },
+
+            new()
+            {
+                Name = "Haumea",
+                Subtitle = "The Hawaiian goddess of fertility and childbirth",
+                HeroImage = "haumea.png",
+                Description = "Haumea is another dwarf planet in the Kuiper Belt,"+
+                "discovered in 2004 by a team of astronomers led by Mike Brown."+
+                "It is named after the Hawaiian goddess of fertility."+
+                "Haumea is distinctive due to its elongated shape, resembling a flattened ellipsoid,"+
+                "possibly the result of a rapid rotation. It has two known moons, Hi'iaka and Namaka,"+
+                "named after Hawaiian goddesses and discovered in 2005."+
+                "Haumea's surface is thought to be composed of crystalline water ice,"+
+                "and it displays a relatively high albedo, making it one of the brighter objects in the Kuiper Belt."+
+                "The discovery of Haumea and its unique characteristics has contributed to"+
+                "our understanding of the diversity of objects in the outer solar system.",
+                AccentColorStart = Color.FromArgb("#0c293d"),
+                AccentColorEnd = Color.FromArgb("#26abe0"),
+                Images = new()
+                {
+                    "https://static.wikia.nocookie.net/expanse/images/1/1f/Haumea_in_Celestia.jpg/revision/latest?cb=20200206143331"
+                }
+            },
+            new()
+            {
+                Name = "MakeMake",
+                Subtitle = "The deity of creation and fertility",
+                HeroImage = "makemake.png",
+                Description = "Makemake is another dwarf planet located in the Kuiper Belt,"+
+                "a region of the outer solar system beyond Neptune."+
+                "It was discovered in 2005 by astronomers using the Palomar Observatory."+
+                "Similar to Pluto and Eris, Makemake is part of the group of trans-Neptunian objects known as dwarf planets."+
+                "It is notable for its lack of a significant atmosphere and its relatively high albedo,"+
+                "indicating a bright and reflective surface, likely composed of a mixture of frozen methane"+
+                "ethane, and nitrogen. Makemake is the second-brightest dwarf planet after Pluto and"+
+                "is recognized as one of the largest objects in the Kuiper Belt."+
+                "Its discovery contributed to the ongoing understanding and classification of objects in the outer solar system.",
+                AccentColorStart = Color.FromArgb("#0c293d"),
+    AccentColorEnd = Color.FromArgb("#26abe0"),
+    Images = new()
+    {
+        "https://upload.wikimedia.org/wikipedia/commons/2/29/Makemake_and_its_moon.jpg"
+    }
+            },
+
+            new()
+            {
+                Name = "Eris",
+                Subtitle = "The goddess of strife, discord, and chaos",
+                HeroImage = "eris.png",
+                Description = "Eris, a dwarf planet situated in the scattered disk of the outer solar system,"+
+                "was identified in 2005 by astronomers at the Palomar Observatory."+
+                "Smaller than Pluto but more massive, Eris ranks among the largest dwarf planets."+
+                "Its orbit, more elliptical than Pluto's, places it at a greater average distance from the Sun."+
+                "Eris boasts a highly reflective surface, likely comprising a mix of water ice and frozen methane."+
+                "The discovery of Eris played a crucial role in the reclassification of Pluto and similar objects,"+
+                "leading to the establishment of the \"dwarf planet\" category by the International Astronomical Union (IAU).",
+                AccentColorStart = Color.FromArgb("#0c293d"),
+                AccentColorEnd = Color.FromArgb("#26abe0"),
+                Images = new()
+                {
+                    "https://photojournal.jpl.nasa.gov/jpegMod/PIA17307_modest.jpg",
+                    "https://photojournal.jpl.nasa.gov/jpegMod/PIA03034_modest.jpg"
+                }
+            },
+
     };
-
-        public static List<Planet> GetFeaturedPlanets()
-        {
-            var random = new Random();
-            var randomizedPlanets = planets.OrderBy(item => random.Next());
-
-            return randomizedPlanets.Take(2).ToList();
-        }
-
-        public static List<Planet> GetAllPlanets()
+public static List<Planet> GetFeaturedPlanets()
+{
+    var random = new Random();
+    var randomizedPlanets = planets.OrderBy(item => random.Next());
+    return randomizedPlanets.Take(2).ToList();
+}
+public static List<Planet> GetAllPlanets()
             => planets;
     }
 }
